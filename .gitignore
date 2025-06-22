@@ -3,12 +3,10 @@
 ################################################################################
 
 /.vs
-/MyConcept.BusinessLogic/bin/Debug/net8.0
-/MyConcept.BusinessLogic/obj/Debug/net8.0
-/MyConcept.Data/bin/Debug/net8.0
-/MyConcept.Data/obj/Debug
-/MyConcept.Data/obj
+/MyConcept.BusinessLogic/bin/
 /MyConcept.BusinessLogic/obj
-/MyConcept.WebAPI/bin/Debug/net8.0
+/MyConcept.Data/bin/
+/MyConcept.Data/obj
+/MyConcept.WebAPI/bin
 /MyConcept.WebAPI/obj
 *.user
