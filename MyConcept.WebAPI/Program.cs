@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using MyConcept.Data;
 using System.Reflection;
 
@@ -17,6 +18,8 @@ namespace MyConcept.WebAPI
                 .ToArray();
             builder.Services.AddMediatR(cfg => 
                 cfg.RegisterServicesFromAssemblies(assemblies));
+            builder.Services.AddAutoMapper(cfg => 
+                cfg.AddMaps(assemblies));
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

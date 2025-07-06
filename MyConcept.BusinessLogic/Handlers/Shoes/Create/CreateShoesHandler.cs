@@ -1,12 +1,18 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
+using MyConcept.Data;
+using MyConcept.Data.Entities;
 
 namespace MyConcept.BusinessLogic.Handlers.Shoes.Create
 {
-    internal class CreateShoesHandler : IRequestHandler<CreateShoesRequest>
+    internal class CreateShoesHandler(MyConceptContext Context, IMapper Mapper) : IRequestHandler<CreateShoesRequest>
     {
-        public Task Handle(CreateShoesRequest request, CancellationToken cancellationToken)
+        public async Task Handle(CreateShoesRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            var newShoe = Mapper.Map<ShoeEntity>(request.ShoesDto);
+
+            Context.Shoes.Add(newShoe);
+            await Context.SaveChangesAsync(cancellationToken);
         }
     }
 }
