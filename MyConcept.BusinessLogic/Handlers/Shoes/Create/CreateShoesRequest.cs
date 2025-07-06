@@ -3,5 +3,5 @@ using MyConcept.BusinessLogic.Handlers.Shoes.Create.Models;
 
 namespace MyConcept.BusinessLogic.Handlers.Shoes.Create
 {
-    public class Request(CreateShoesDto shoesDto) : IRequest;
+    public record CreateShoesRequest(CreateShoesDto ShoesDto) : IRequest;
 }

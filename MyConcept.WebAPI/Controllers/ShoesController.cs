@@ -7,12 +7,12 @@ namespace MyConcept.WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ShoesController(IMediator Mediator) : Controller
+    public class ShoesController(IMediator Mediator) : ControllerBase
     {
         [HttpPost]
         public async Task Create(CreateShoesDto shoes)
         {
-            await Mediator.Send(new Request(shoes));
+            await Mediator.Send(new CreateShoesRequest(shoes));
         }
     }
 }

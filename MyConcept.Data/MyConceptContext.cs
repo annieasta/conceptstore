@@ -6,8 +6,7 @@ namespace MyConcept.Data
 {
     public class MyConceptContext : DbContext
     {
-        public DbSet<BasketEntity> Baskets { get; set; }
-        public DbSet<BasketProductEntity> BasketProducts { get; set; }
+        public DbSet<CustomerProductEntity> CustomerProducts { get; set; }
         public DbSet<WishListEntity> WishLists { get; set; }
         public DbSet<WishListProductEntity> WishListProducts { get; set; }
         public DbSet<ProductEntity> Products { get; set; }
